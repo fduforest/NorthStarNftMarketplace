@@ -1,3 +1,252 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --color-dark: #282423;
+
+    --spacing-xs: 0.8rem;
+    --spacing-sm: 1.6rem;
+    --spacing-md: 2.4rem;
+    --spacing-lg: 3.2rem;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --border-radius-sm: 1.6rem;
+    --border-radius-md: 2.4rem;
+
+    --box-shadow-md: 0 0 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+html {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: var(--font-weight-normal);
+    color: var(--color-dark);
+}
+
+.mobile-nav-menu .container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+/* Mobile */
+@media screen and (max-width: 743px) {
+    .container {
+        width: 95vw;
+        padding: 1.25rem;
+        padding-top: 4.375rem;
+        padding-bottom: 4.375rem;
+    }
+
+    .container.mobile-nav {
+        padding: 1.25rem;
+    }
+
+    nav .container {
+        height: 9.45vh;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .subtitle p {
+        max-width: 3rem;
+    }
+
+    .left-column {
+        max-width: 300px;
+    }
+
+    h1 {
+        margin: 4.25rem auto;
+        font-size: 3.25rem;
+        line-height: 4rem;
+    }
+
+    h2 {
+        font-size: 2.375rem;
+        line-height: 3.125rem;
+    }
+
+    h3 {
+        font-size: 2.375rem;
+        line-height: 3.125rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    .rounded-img img {
+        width: 17.5rem;
+        height: 17.5rem;
+    }
+
+    .half-rounded-img img {
+        width: 22rem;
+        height: 11rem;
+        border-top-left-radius: 99999px;
+        border-top-right-radius: 99999px;
+        border: 1px solid var(--color-dark);
+        object-fit: cover;
+        border-bottom: none;
+    }
+
+}
+
+/* Tablet */
+@media screen and (min-width: 744px) {
+    nav .container {
+        height: 9.45vh;
+    }
+
+    main .container {
+        padding: 5rem 4.25rem 3.75rem 4.25rem;
+    }
+
+    h1 {
+        margin: 5rem auto 3rem auto;
+        font-size: 5rem;
+        line-height: 4.5rem;
+        width: 100%;
+    }
+
+    .container {
+        max-width: 97.76vw !important;
+        padding: 3rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    h4 {
+        font-size: 2.225rem;
+        line-height: 1.5rem;
+    }
+
+    .wrapper {
+        width: 600%;
+        min-height: 90.55vh;
+        display: flex;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .rounded-img img {
+        width: 33.125rem;
+        height: 33.125rem;
+        border-radius: 99999px;
+        border: 1px solid var(--color-dark);
+        object-fit: cover;
+    }
+
+    .half-rounded-img img {
+        width: 80rem;
+        height: 40rem;
+        border-top-left-radius: 99999px;
+        border-top-right-radius: 99999px;
+        border: 1px solid var(--color-dark);
+        object-fit: cover;
+        border-bottom: none;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 1439px) {
+    main .container {
+        padding: 8rem 3.25rem 3.75rem 3.25rem;
+        min-height: 900px;
+    }
+
+    h1 {
+        margin: 9rem auto 5rem 0;
+        font-size: 6.5rem;
+        line-height: 6rem;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 5rem;
+        line-height: 6.875rem;
+    }
+
+    h3 {
+        font-size: 4.25rem;
+        line-height: 5rem;
+    }
+
+    h4 {
+        font-size: 2.5rem;
+        line-height: 1.5rem;
+    }
+
+    .container {
+        max-width: calc(min(1920px, 100%) - 32px);
+        padding: 4.25rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1920px) {
+    main .container {
+        padding: 10rem 4.25rem 3.75rem 4.25rem;
+        min-height: 948px;
+    }
+
+    h1 {
+        margin: 9rem auto 5rem 0;
+        font-size: 7.5rem;
+        line-height: 7.68rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+
+    .container {
+        max-width: calc(min(1920px, 100%) - 2rem);
+        @apply p-68;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    @apply font-serif;
+    z-index: 1;
+}
+
+
