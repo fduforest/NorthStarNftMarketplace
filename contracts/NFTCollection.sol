@@ -46,7 +46,7 @@ using Counters for Counters.Counter;
      * @param _tokenAddress address du token
      * @param _price NFT price
      * @param _favorite NFT favorite
-     * @param _isAuctionable NFT auctioned
+     * @param _auctionable NFT auctioned
      * @return newItemId New id of the item that has been minted
      */
     
