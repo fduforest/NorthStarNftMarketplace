@@ -48,6 +48,7 @@ using Counters for Counters.Counter;
      * @param _favorite NFT favorite
      * @param _isAuctionable NFT auctioned
      * @return newItemId New id of the item that has been minted
+     */
     
     function MintNFTCollection(address _user,string memory _tokenURI,string memory _name,string memory _description,string memory _tag,address _tokenAddress,uint256 _price, bool _favorite,bool _auctionable
     ) public returns (uint256) {
